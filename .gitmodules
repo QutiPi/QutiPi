@@ -1,0 +1,28 @@
+[submodule "vendor/poky-rocko"]
+	path = vendor/poky-rocko
+	url = git://git.yoctoproject.org/poky.git
+	branch = rocko
+[submodule "vendor/meta-qt5"]
+	path = vendor/meta-qt5
+	url = https://github.com/meta-qt5/meta-qt5
+	branch = rocko
+[submodule "vendor/meta-security"]
+	path = vendor/meta-security
+	url = git://git.yoctoproject.org/meta-security
+	branch = rocko
+[submodule "vendor/meta-raspberrypi"]
+	path = vendor/meta-raspberrypi
+	url = git://git.yoctoproject.org/meta-raspberrypi
+	branch = rocko
+[submodule "vendor/meta-openembedded"]
+	path = vendor/meta-openembedded
+	url = git://git.openembedded.org/meta-openembedded
+	branch = rocko
+[submodule "vendor/meta-mingw"]
+	path = vendor/meta-mingw
+	url = git://git.yoctoproject.org/meta-mingw
+	branch = rocko
+[submodule "vendor/meta-darwin"]
+	path = vendor/meta-darwin
+	url = git://git.yoctoproject.org/meta-darwin
+	branch = rocko
