@@ -15,6 +15,9 @@ ENABLE_SPI_BUS = "1"
 ENABLE_I2C = "1"
 
 # Enable video cam support
-VIDEO_CAMERA
+VIDEO_CAMERA = "1"
+
+# Disable pi logo on boot
+DISABLE_RPI_BOOT_LOGO = "1"
 
 
