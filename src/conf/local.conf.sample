@@ -1,0 +1,64 @@
+
+# Select the manufacturer of the hardware
+MANUFACTURER="raspberrypi"
+
+# Select the hardware from the manufacturer
+MACHINE="raspberrypi-cm3"
+
+
+# Set default user account
+INHERIT += "extrausers"
+EXTRA_USERS_PARAMS = "usermod -P qutipi root; "
+
+
+
+# Where to store the temp build files?
+#TMPDIR = "${TOPDIR}/tmp"
+
+# Where to store the downloaded files
+#DL_DIR ?= "${TOPDIR}/downloads"
+
+# Where to store the shared state cache
+#SSTATE_DIR ?= "${TOPDIR}/downloads"
+
+
+
+# The selected distribution 
+DISTRO ?= "qutipi"
+
+
+
+# SDK target architecture
+# SDKMACHINE = "i686-mingw32"
+SDKMACHINE = "i386-darwin"
+
+
+
+# Addtion image feature 
+EXTRA_IMAGE_FEATURES = "debug-tweaks"
+
+
+
+# Set the number of parrallel task to run for bitbake
+# By default this is the number of cores on your PC
+# BB_NUMBER_THREADS = ""
+
+# Set the number of cores to use during "do_compile"
+# By default this is the number of cores on your PC
+# PARALLEL_MAKE = ""
+
+
+
+# Track breaking changes to this file
+CONF_VERSION = "1"
+
+
+
+# Ensure builds fail if cant apply patch
+PATCHRESOLVE = "noop"
+
+
+
+# Delete temporary workspace during builds
+INHERIT += "rm_work"
+

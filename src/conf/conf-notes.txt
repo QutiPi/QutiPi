@@ -1,0 +1,5 @@
+Some custom targets are
+
+    qt5-image
+    qt5-basic-image
+

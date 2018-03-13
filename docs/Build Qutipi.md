@@ -41,7 +41,7 @@ Next if you look in the build directoru you will see a local.conf file. I recomm
 There may be variable in here which you want to edit for example:
 
   * MANUFACTURER: This is the manufacturer of the hardware to help group taregt architectures (eg raspberrypi)
-  * MACHINE: The hardware identification which determins the target architecture (eg cm3)
+  * MACHINE: The hardware identification which determins the target architecture (eg raspberrypi-cm3)
   * EXTRA_USERS_PARAMS: PLEASE CHANGE the default user account password by replacing the word "qutipi" with your desired password
   * DL_DIR: The central download directory used by the build process to store downloads
   * SSTATE_DIR: The directory for the shared state cache
