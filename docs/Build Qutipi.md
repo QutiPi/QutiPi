@@ -55,7 +55,7 @@ We are now going to build Qutipi using bitbake by running the following
 bitbake qt5-image
 ```
 
-
+This will take several hours to complete if it is the first time building.
 
 
 
