@@ -103,7 +103,7 @@ The script accept three commands:
 Run the following command:
 
 ```bash
-./scripts/copy_rootfs.sh sdb qt5 qutipi
+./scripts/copy_rootfs.sh sdf qt5 qutipi
 ```
 
 You can now un mount the SD card and its ready for the pi :D
