@@ -1,0 +1,17 @@
+--- Starting bitbake server pid 17646 at 2018-03-15 10:23:06.908089 ---
+ERROR: Layer directory '/home/electronics/Documents/meta-qutipi/packages/${PACKAGE}' does not exist! Please check BBLAYERS in /home/electronics/Documents/meta-qutipi/build/conf/bblayers.conf
+--- Starting bitbake server pid 17684 at 2018-03-15 10:36:59.426893 ---
+ERROR: Traceback (most recent call last):
+  File "/home/electronics/Documents/meta-qutipi/vendor/poky-rocko/bitbake/lib/bb/cookerdata.py", line 178, in wrapped
+    return func(fn, *args)
+  File "/home/electronics/Documents/meta-qutipi/vendor/poky-rocko/bitbake/lib/bb/cookerdata.py", line 203, in parse_config_file
+    return bb.parse.handle(fn, data, include)
+  File "/home/electronics/Documents/meta-qutipi/vendor/poky-rocko/bitbake/lib/bb/parse/__init__.py", line 117, in handle
+    return h['handle'](fn, data, include)
+  File "/home/electronics/Documents/meta-qutipi/vendor/poky-rocko/bitbake/lib/bb/parse/parse_py/ConfHandler.py", line 134, in handle
+    abs_fn = resolve_file(fn, data)
+  File "/home/electronics/Documents/meta-qutipi/vendor/poky-rocko/bitbake/lib/bb/parse/__init__.py", line 140, in resolve_file
+    raise IOError(errno.ENOENT, "file %s not found" % fn)
+FileNotFoundError: [Errno 2] file /home/electronics/Documents/meta-qutipi/packages/raspberrypi/conf/layer.conf not found
+
+ERROR: Unable to parse /home/electronics/Documents/meta-qutipi/packages/raspberrypi/conf/layer.conf: [Errno 2] file /home/electronics/Documents/meta-qutipi/packages/raspberrypi/conf/layer.conf not found
