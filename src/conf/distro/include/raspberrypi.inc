@@ -3,7 +3,7 @@
 IMAGE_FSTYPES += "tar.xz"
 
 # Add any addtion features (@todo add vc4graphics)
-MACHINE_FEATURES += "pitft"
+# MACHINE_FEATURES += "pitft"
 
 # Enable UART
 ENABLE_UART = "1"

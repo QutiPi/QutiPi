@@ -47,8 +47,8 @@ fi
 echo -e "HOSTNAME: $TARGET_HOSTNAME\n"
 
 
-if [ ! -f "${SRCDIR}/${IMAGE}-image-${MACHINE}.tar.xz" ]; then
-        echo "File not found: ${SRCDIR}/${IMAGE}-image-${MACHINE}.tar.xz"
+if [ ! -f "${SRCDIR}/${IMAGE}-image-${MACHINE}.tar.bz2" ]; then
+        echo "File not found: ${SRCDIR}/${IMAGE}-image-${MACHINE}.tar.bz2"
         exit 1
 fi
 
@@ -83,8 +83,8 @@ if [ "$?" -ne 0 ]; then
 	exit 1
 fi
 
-echo "Extracting ${IMAGE}-image-${MACHINE}.tar.xz to /media/card"
-sudo tar --numeric-owner -C /media/card -xJf ${SRCDIR}/${IMAGE}-image-${MACHINE}.tar.xz
+echo "Extracting ${IMAGE}-image-${MACHINE}.tar.bz2 to /media/card"
+sudo tar --numeric-owner -C /media/card -xvjf ${SRCDIR}/${IMAGE}-image-${MACHINE}.tar.bz2
 
 echo "Writing ${TARGET_HOSTNAME} to /etc/hostname"
 export TARGET_HOSTNAME

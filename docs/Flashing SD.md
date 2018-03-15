@@ -28,7 +28,7 @@ cd ~/Documents/meta-qutipi
 
 ## Partition SD Card
 
-Step two is to create two partitions on the SD card. This first parition is for the bootloader and the second for the actual OS which is loaded by the GPU on boot.
+Step two is to create two partitions on the SD card. This first parition is for the bootloader and the second for the actual OS which is loaded by the GPU on boot. 
 
 Run the following command, **Replacing sdf with your SD card name**:
 
@@ -45,7 +45,7 @@ sudo umount /dev/sdf2
 
 ## Creating Mounting Point
 
-To enable us to eventually copy the the image to the SD card using the scripts we need to create a mounting point.
+To enable us to eventually copy the the image to the SD card using the scripts we need to create a mounting point.This only has to be run once on you computer.
 
 Run the following command:
 
@@ -87,7 +87,7 @@ export MACHINE=raspberrypi-cm3
 Now we copy the boot image to the boot partition. This should only take a few moments and once finished you can customise the config.txt and cmdline.txt files if you wish. Remember you can use the raspberrypi docunmetation as QutiPi uses the RaspberyPi Kernal.
 
 ```bash
-./scripts/copy_boot.sh sdg
+./scripts/copy_boot.sh sdf
 ```
 
 ## Copy Root Partition
@@ -105,4 +105,6 @@ Run the following command:
 ```bash
 ./scripts/copy_rootfs.sh sdb qt5 qutipi
 ```
+
+You can now un mount the SD card and its ready for the pi :D
 
