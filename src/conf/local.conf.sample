@@ -1,6 +1,6 @@
 
-# Select the manufacturer of the hardware
-MANUFACTURER="raspberrypi"
+# Select the addon package for the hardware
+ADDON = "raspberrypi"
 
 # Select the hardware from the manufacturer
 MACHINE="raspberrypi-cm3"
