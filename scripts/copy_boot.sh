@@ -140,13 +140,13 @@ fi
 echo "Stripping ${KERNEL_IMAGETYPE}- from overlay dtbs"
 case "${KERNEL_IMAGETYPE}" in
 	Image)
-		sudo rename 's/Image-([\w\-]+)-overlay.dtb/$1.dtbo/' /media/card/overlays/*.dtb
+		sudo rename 's/Image-([\w\-]+)-overlay.dtb/$1.dtbo/g' /media/card/overlays/*.dtb
 		;;
 	zImage)
-		sudo rename 's/zImage-([\w\-]+)-overlay.dtb/$1.dtbo/' /media/card/overlays/*.dtb
+		sudo rename 's/zImage-([\w\-]+)-overlay.dtb/$1.dtbo/g' /media/card/overlays/*.dtb
 		;;
 	uImage)
-		sudo rename 's/uImage-([\w\-]+)-overlay.dtb/$1.dtbo/' /media/card/overlays/*.dtb
+		sudo rename 's/uImage-([\w\-]+)-overlay.dtb/$1.dtbo/g' /media/card/overlays/*.dtb
 		;;
 esac
 

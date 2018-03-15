@@ -1,0 +1,11 @@
+[Unit]
+Description=Terminate Psplash Boot Screen
+After=psplash-start.service
+
+[Service]
+Environment=TMPDIR=/run
+Type=oneshot
+ExecStart=/usr/bin/psplash-write QUIT
+
+[Install]
+WantedBy=multi-user.target

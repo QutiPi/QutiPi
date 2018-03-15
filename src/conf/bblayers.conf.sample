@@ -1,6 +1,11 @@
 # POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
 # changes incompatibly
+# vendor/openembedded-core/meta
+# vendor/meta-darwin
 POKY_BBLAYERS_CONF_VERSION = "2"
+
+# Include the local config file to access variables
+include conf/local.conf
 
 BBPATH = "${TOPDIR}"
 BBFILES ?= ""
@@ -21,4 +26,8 @@ BBLAYERS ?= " \
   ${BSPDIR}/vendor/meta-qt5 \
   ${BSPDIR}/vendor/meta-mingw \
   ${BSPDIR}/src \
+  ${BSPDIR}/packages/${PACKAGE} \
+  ${BSPDIR}/customise/${CUSTOMISE} \
 "
+
+
