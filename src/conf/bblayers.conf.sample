@@ -28,6 +28,7 @@ BBLAYERS ?= " \
   ${BSPDIR}/src \
   ${BSPDIR}/packages/${PACKAGE} \
   ${BSPDIR}/customise/${CUSTOMISE} \
+  ${BSPDIR}/hardware/${HARDWARE} \
 "
 
 

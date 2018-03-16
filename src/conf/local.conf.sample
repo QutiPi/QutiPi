@@ -1,5 +1,5 @@
 
-# Customisation package << Suggest make changes here for your porject
+# Customisation package << Suggested place to make changes for your project
 CUSTOMISE = "muelectronics-10000-actions"
 
 # Select the addon package for the hardware
@@ -8,11 +8,17 @@ PACKAGE = "raspberrypi"
 # Select the hardware from the manufacturer
 MACHINE = "raspberrypi-cm3"
 
+# Hardware configuration
+HARDWARE = "version-1-full"
+
+
+
 
 
 # Set default user account
 INHERIT += "extrausers"
 EXTRA_USERS_PARAMS = "usermod -P qutipi root; "
+
 
 
 
