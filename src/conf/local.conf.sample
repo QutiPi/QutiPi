@@ -1,6 +1,6 @@
 
 # Customisation package << Suggest make changes here for your porject
-CUSTOMISE = "muelectronics"
+CUSTOMISE = "muelectronics-10000-actions"
 
 # Select the addon package for the hardware
 PACKAGE = "raspberrypi"

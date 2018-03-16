@@ -26,3 +26,6 @@
 	path = vendor/meta-darwin
 	url = git://git.yoctoproject.org/meta-darwin
 	branch = rocko
+[submodule "tools/psplash"]
+	path = tools/psplash
+	url = https://git.yoctoproject.org/git/psplash
