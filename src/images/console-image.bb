@@ -54,6 +54,7 @@ DEV_EXTRAS = " \
     serialecho  \
     spiloop \
     firewall \
+    macchanger \
 "
 
 EXTRA_TOOLS_INSTALL = " \
