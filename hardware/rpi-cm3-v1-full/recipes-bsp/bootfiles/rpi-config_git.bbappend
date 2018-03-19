@@ -22,4 +22,7 @@ do_deploy_append() {
     # Setup CMA
     sed -i '/#cma_lwm=16/ c\cma_lwm=16' ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
     sed -i '/#cma_hwm=32/ c\cma_hwm=32' ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+
+    # Enabled the watchdog timer
+    echo "watchdog=on" >>${DEPLOYDIR}/bcm2835-bootfiles/config.txt
 }

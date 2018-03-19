@@ -55,6 +55,7 @@ DEV_EXTRAS = " \
     spiloop \
     firewall \
     macchanger \
+    watchdog \
 "
 
 EXTRA_TOOLS_INSTALL = " \
