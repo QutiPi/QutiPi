@@ -1,0 +1,24 @@
+#!/bin/sh
+
+case "$1" in
+    start)
+        echo "Setting system time via RTC"
+        /etc/scripts/rtc-set-time.sh
+        ;;
+
+    stop)
+        echo "Doing nothing :("
+        ;;
+
+    restart)
+        echo "Setting system time via RTC"
+        /etc/scripts/rtc-set-time.sh
+        ;;
+
+    *)
+        echo "Usage: rtc-load { start | restart }"
+        ;;
+esac
+
+exit 0
+

@@ -1,0 +1,11 @@
+[Unit]
+Description=Set OS clock time via RTC
+
+[Service]
+Type=oneshot
+ExecStart=/etc/scripts/rtc-set-time.sh
+ExecReload=/etc/scripts/rtc-set-time.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

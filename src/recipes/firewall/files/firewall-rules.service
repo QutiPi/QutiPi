@@ -1,0 +1,12 @@
+[Unit]
+Description=Packet Filtering Framework
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/iptables-restore /etc/firewall.rules
+ExecReload=/usr/sbin/iptables-restore /etc/firewall.rules
+ExecStop=/etc/scripts/flush-firewall-rules.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
