@@ -1,0 +1,8 @@
+# Start watchdog at boot time? 0 or 1
+run_watchdog=1
+
+# Watch dog module
+watchdog_module="bcm2835_wdt"
+
+# Setup time 
+options bcm2835_wdt nowayout=1 heartbeat=10
