@@ -53,6 +53,7 @@ DEV_EXTRAS = " \
     ntp-tickadj \
     serialecho  \
     spiloop \
+    firewall \
 "
 
 EXTRA_TOOLS_INSTALL = " \
