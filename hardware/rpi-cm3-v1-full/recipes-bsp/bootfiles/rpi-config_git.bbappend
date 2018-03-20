@@ -8,7 +8,7 @@ do_deploy_append() {
     echo "dtoverlay=i2c-sensor,addr=0x4f,lm75" >>${DEPLOYDIR}/bcm2835-bootfiles/config.txt
 
     # Enable onboard RTC
-    echo "dtoverlay=i2c-rtc,d1307" >>${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+    echo "dtoverlay=i2c-rtc,ds1307" >>${DEPLOYDIR}/bcm2835-bootfiles/config.txt
 
     # HDMI display rotation
     # 0 = none, 1 = 90cw, 2 = 180cw, 3 = 270cw, 0x10000 = hflip, 0x20000 = vflip

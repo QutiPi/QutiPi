@@ -60,8 +60,6 @@ DEV_EXTRAS = " \
 
 LMSENSORS_ALL = " \
     lmsensors-sensors \
-    lmsensors-sensors-dev \
-    lmsensors-sensors-staticdev \
     lmsensors-fancontrol \
     lmsensors-libsensors \
     lmsensors-pwmconfig \
@@ -69,7 +67,6 @@ LMSENSORS_ALL = " \
     lmsensors-sensors \
     lmsensors-sensorsconfconvert \
     lmsensors-sensorsdetect \
-    lmsensors-isatool \
 "
 
 EXTRA_TOOLS_INSTALL = " \
@@ -107,6 +104,7 @@ IMAGE_INSTALL += " \
     ${EXTRA_TOOLS_INSTALL} \
     ${RPI_STUFF} \
     ${WIFI_SUPPORT} \
+    ${LMSENSORS_ALL} \
 "
 
 set_local_timezone() {
