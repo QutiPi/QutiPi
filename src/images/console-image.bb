@@ -58,6 +58,20 @@ DEV_EXTRAS = " \
     watchdog \
 "
 
+LMSENSORS_ALL = " \
+    lmsensors-sensors \
+    lmsensors-sensors-dev \
+    lmsensors-sensors-staticdev \
+    lmsensors-fancontrol \
+    lmsensors-libsensors \
+    lmsensors-pwmconfig \
+    lmsensors-sensord \
+    lmsensors-sensors \
+    lmsensors-sensorsconfconvert \
+    lmsensors-sensorsdetect \
+    lmsensors-isatool \
+"
+
 EXTRA_TOOLS_INSTALL = " \
     bzip2 \
     devmem2 \
