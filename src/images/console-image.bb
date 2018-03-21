@@ -91,6 +91,7 @@ EXTRA_TOOLS_INSTALL = " \
     wget \
     zip \
     init-ifupdown \
+    resolvconf \
 "
 
 
