@@ -9,7 +9,7 @@ PACKAGE = "raspberrypi"
 MACHINE = "raspberrypi-cm3"
 
 # Hardware configuration
-HARDWARE = "version-1-full"
+HARDWARE = "rpi-cm3-v1-full"
 
 
 
@@ -18,6 +18,19 @@ HARDWARE = "version-1-full"
 # Set default user account
 INHERIT += "extrausers"
 EXTRA_USERS_PARAMS = "usermod -P qutipi root; "
+
+
+
+
+# Configure 'static' or 'dhcp' interface
+ETHERNET_TYPE = "static"
+
+# Set static IP
+ETHERNET_IP = "130.88.237.210"
+ETHERNET_NETMASK = "255.255.255.0"
+ETHERNET_BROADCAST = "130.88.237.250"
+ETHERNET_GATEWAY = "130.88.237.250"
+ETHERNET_NAMESERVERS = "130.88.13.7 8.8.8.8"
 
 
 

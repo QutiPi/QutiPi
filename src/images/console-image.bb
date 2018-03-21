@@ -90,6 +90,7 @@ EXTRA_TOOLS_INSTALL = " \
     util-linux \
     wget \
     zip \
+    init-ifupdown \
 "
 
 

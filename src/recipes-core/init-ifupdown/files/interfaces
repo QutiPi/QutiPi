@@ -2,7 +2,12 @@ auto lo
 iface lo inet loopback
 
 auto eth0
-iface eth0 inet dhcp
+iface eth0 inet static
+address 130.88.237.210
+netmask 255.255.255.0
+broadcast 130.88.237.250
+gateway 130.88.237.250
+dns-nameservers 130.88.13.7 8.8.8.8
 
 #auto wlan0
 iface wlan0 inet dhcp

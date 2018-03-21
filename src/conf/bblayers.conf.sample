@@ -11,7 +11,7 @@ BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 BSPDIR := "${@os.path.abspath(os.path.dirname(d.getVar('FILE', True)) + '/../..')}"
 
-
+# Include layers
 BBLAYERS ?= " \
   ${BSPDIR}/vendor/poky-rocko/meta \
   ${BSPDIR}/vendor/poky-rocko/meta-poky \
@@ -21,8 +21,8 @@ BBLAYERS ?= " \
   ${BSPDIR}/vendor/meta-openembedded/meta-initramfs \
   ${BSPDIR}/vendor/meta-openembedded/meta-multimedia \
   ${BSPDIR}/vendor/meta-openembedded/meta-perl \
-  ${BSPDIR}/vendor/meta-security \
   ${BSPDIR}/vendor/meta-raspberrypi \
+  ${BSPDIR}/vendor/meta-security \
   ${BSPDIR}/vendor/meta-qt5 \
   ${BSPDIR}/vendor/meta-mingw \
   ${BSPDIR}/src \
