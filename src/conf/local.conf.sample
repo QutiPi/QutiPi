@@ -22,17 +22,6 @@ EXTRA_USERS_PARAMS = "usermod -P qutipi root; "
 
 
 
-# Configure 'static' or 'dhcp' interface
-ETHERNET_TYPE = "static"
-
-# Set static IP
-ETHERNET_IP = "130.88.237.210"
-ETHERNET_NETMASK = "255.255.255.0"
-ETHERNET_BROADCAST = "130.88.237.250"
-ETHERNET_GATEWAY = "130.88.237.250"
-ETHERNET_NAMESERVERS = "130.88.13.7 8.8.8.8"
-
-
 
 
 # Where to store the temp build files?
