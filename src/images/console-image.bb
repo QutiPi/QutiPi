@@ -90,10 +90,15 @@ EXTRA_TOOLS_INSTALL = " \
     util-linux \
     wget \
     zip \
-    init-ifupdown \
-    resolvconf \
+    ethtool \
+    iproute2 \
 "
-
+# resolvconf
+# init-ifupdown
+# connman
+# networkmanager
+# networkmanager
+# init-ifupdown
 
 RPI_STUFF = " \
     userland \
