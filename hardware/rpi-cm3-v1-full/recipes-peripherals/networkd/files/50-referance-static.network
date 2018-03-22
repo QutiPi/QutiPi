@@ -1,0 +1,15 @@
+[Match]
+Name=${ETHERNET_INTERFACE}
+
+[Link]
+MACAddress=${ETHERNET_MAC}
+
+[Address]
+Address=${ETHERNET_IP}/${ETHERNET_NETMASK}
+Broadcast=${ETHERNET_BROADCAST}
+
+[Network]
+DNS=${ETHERNET_NAMESERVERS}
+
+[Route]
+Gateway=${ETHERNET_GATEWAY}

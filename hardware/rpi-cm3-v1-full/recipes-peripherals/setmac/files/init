@@ -1,0 +1,24 @@
+#!/bin/sh
+
+case "$1" in
+    start)
+        echo "Setting ethernet interface"
+        /etc/scripts/etherent-setup.sh
+        ;;
+
+    stop)
+        echo "Doing nothing :("
+        ;;
+
+    restart)
+        echo "Setting ethernet interface"
+        /etc/scripts/etherent-setup.sh
+        ;;
+
+    *)
+        echo "Usage: rtc-load { start | restart }"
+        ;;
+esac
+
+exit 0
+

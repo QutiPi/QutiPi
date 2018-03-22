@@ -1,0 +1,15 @@
+[Match]
+Name=eth0
+
+[Link]
+MACAddress=32:23:eb:76:e1:45
+
+[Address]
+Address=130.88.237.210/24
+Broadcast=130.88.237.255
+
+[Network]
+DNS=130.88.13.7
+
+[Route]
+Gateway=130.88.237.250

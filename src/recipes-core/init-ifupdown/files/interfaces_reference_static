@@ -1,0 +1,15 @@
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address ${ETHERNET_IP}
+netmask ${ETHERNET_NETMASK}
+broadcast ${ETHERNET_BROADCAST}
+gateway ${ETHERNET_GATEWAY}
+dns-nameservers ${ETHERNET_NAMESERVERS}
+
+#auto wlan0
+iface wlan0 inet dhcp
+        wireless_mode managed
+        wpa-conf /etc/wpa_supplicant.conf

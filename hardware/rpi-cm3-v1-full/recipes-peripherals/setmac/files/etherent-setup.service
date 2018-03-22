@@ -1,0 +1,12 @@
+[Unit]
+Description=Set ethernet interface up and assign mac address
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/etc/scripts/etherent-setup.sh
+ExecReload=/etc/scripts/etherent-setup.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

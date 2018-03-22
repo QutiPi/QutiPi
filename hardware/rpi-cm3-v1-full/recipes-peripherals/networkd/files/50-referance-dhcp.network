@@ -1,0 +1,8 @@
+[Match]
+Name=${ETHERNET_INTERFACE}
+
+[Link]
+MACAddress=${ETHERNET_MAC}
+
+[Network]
+DHCP=ipv4
