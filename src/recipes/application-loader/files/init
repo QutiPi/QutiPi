@@ -1,0 +1,25 @@
+#!/bin/sh
+
+case "$1" in
+    start)
+        echo "Loading default application"
+        /etc/scripts/application-loader.sh start
+        ;;
+
+    stop)
+        echo "Stopping default application"
+        /etc/scripts/application-loader.sh stop
+        ;;
+
+    restart)
+        echo "Reloading default application"
+        /etc/scripts/application-loader.sh reload
+        ;;
+
+    *)
+        echo "Usage: application-loader { start | stop | restart }"
+        ;;
+esac
+
+exit 0
+

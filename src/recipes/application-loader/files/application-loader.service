@@ -1,0 +1,14 @@
+[Unit]
+Description=Loads and controls the default application
+After=systemd-user-sessions.service
+ConditionPathExists=/opt/qutipi/program
+
+[Service]
+Type=oneshot
+ExecStart=/etc/scripts/application-loader.sh start
+ExecReload=/etc/scripts/application-loader.sh restart
+ExecStop=/etc/scripts/application-loader.sh stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

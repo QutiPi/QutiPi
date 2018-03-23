@@ -56,6 +56,7 @@ DEV_EXTRAS = " \
     firewall \
     macchanger \
     watchdog \
+    application-loader \
 "
 
 LMSENSORS_ALL = " \
