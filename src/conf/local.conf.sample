@@ -24,6 +24,29 @@ EXTRA_USERS_PARAMS = "usermod -P qutipi root; "
 
 
 
+# Setup HDMI
+DISPLAY_TYPE = "hdmi"
+
+# Setup the  RPI LCD
+# DISPLAY_TYPE = "rpi7"
+# EGLFS_PWIDTH = "155"
+# EGLFS_PHEIGHT = "86"
+
+# Custom LCD screen (for example pitft35r 480x320 touchscreen)
+# DISPLAY_TYPE = "custom"
+# EGLFS_WIDT = "480"
+# EGLFS_HEIGHT = "320"
+# EGLFS_PWIDTH = "85"
+# EGLFS_PHEIGHT = "50"
+# TOUCHSCREEN_ADDRESS = "/dev/input/touchscreen0"
+# TOUCHSCREEN_ROTATION = "90"
+
+
+
+
+
+
+
 # Where to store the temp build files?
 #TMPDIR = "${TOPDIR}/tmp"
 
