@@ -8,14 +8,14 @@ export MACHINE=raspberrypi-cm3
 export OETMP=~/Documents/meta-qutipi/build/tmp
 
 # Prep the sd
-sudo ${parent_path}/mk2parts.sh sdg
+sudo ${parent_path}/mk2parts.sh $1
 
 # Ensure nothing is using the sd
-sudo umount /dev/sdg1
-sudo umount /dev/sdg2
+sudo umount /dev/$11
+sudo umount /dev/$12
 
 # Flash boot partition
-${parent_path}/copy_boot.sh sdg
+${parent_path}/copy_boot.sh $1
 
 # Flash root file system partition
-${parent_path}/copy_rootfs.sh sdg qt5 qutipi
+${parent_path}/copy_rootfs.sh $1 qt5 qutipi

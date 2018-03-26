@@ -1,7 +1,7 @@
 [Unit]
 Description=Loads and controls the default application
 After=systemd-user-sessions.service
-ConditionPathExists=/opt/qutipi/program
+ConditionPathExists=/home/root/qutipi
 
 [Service]
 Type=oneshot
