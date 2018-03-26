@@ -4,7 +4,11 @@ After the build has been completed by Bitbake the next stage is to copy the bina
 
 This project contains some addtional helper scripts initally taken from meta-rpi; which help in formatting and flashing the image onto the SD card.
 
-## Find your SD card
+## Perform once
+
+Please perform this step only once to config you enviroment and find where you SD card is located.
+
+### Find your SD card
 
 First plug the SD card into your computer and then run the following command:
 
@@ -18,7 +22,32 @@ TIP: Run the command before the SD card is pluged into your PC and after. Compar
 
 WARNING: Selecting the wrong drive and following the below will wipe all data from that drive INCLUDING your computer your using. 
 
-## Navigate
+### Creating Mounting Point
+
+To enable us to eventually copy the the image to the SD card using the scripts we need to create a mounting point.This only has to be run once on you computer.
+
+Run the following command:
+
+```bash
+sudo mkdir /media/card
+```
+
+## Method One
+
+Run the following and your finished, you may be promted if the SD card contains content. Just type 'y' and hit enter.
+
+**REMEMBER:** To change sdf for your SD card location!
+
+```bash
+sudo ./script/quick-flash.sh sdf
+
+```
+
+##Method Two
+
+This method is slightly longer as your perfroming the steps that method one does automtically.
+
+### Navigate
 
 In your terminal navigate to the meta-qutipi directory, for example:
 
@@ -26,7 +55,7 @@ In your terminal navigate to the meta-qutipi directory, for example:
 cd ~/Documents/meta-qutipi
 ```
 
-## Partition SD Card
+### Partition SD Card
 
 Step two is to create two partitions on the SD card. This first parition is for the bootloader and the second for the actual OS which is loaded by the GPU on boot. 
 
@@ -43,17 +72,7 @@ sudo umount /dev/sdf1
 sudo umount /dev/sdf2
 ```
 
-## Creating Mounting Point
-
-To enable us to eventually copy the the image to the SD card using the scripts we need to create a mounting point.This only has to be run once on you computer.
-
-Run the following command:
-
-```bash
-sudo mkdir /media/card
-```
-
-## Copy Boot Image to SD
+### Copy Boot Image to SD
 
 This script automats the proccess of copying all the required files to the SD card, for example:
 
@@ -90,7 +109,7 @@ Now we copy the boot image to the boot partition. This should only take a few mo
 ./scripts/copy_boot.sh sdf
 ```
 
-## Copy Root Partition
+### Copy Root Partition
 
 Finally we can now copy the root file system to the root partition, yey. This script needs the "OETMP" and "MACHINE" variables to function but if you have already set them as per above and are still using the same terminal window then your ready to go.
 
