@@ -43,7 +43,7 @@ sudo ./script/quick-flash.sh sdf
 
 ```
 
-##Method Two
+## Method Two
 
 This method is slightly longer as your perfroming the steps that method one does automtically.
 
