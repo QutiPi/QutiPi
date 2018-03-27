@@ -1,6 +1,14 @@
 SRCREV = "648ffc470824c43eb0d16c485f4c24816b32cd6f"
 
 do_deploy_append() {
+
+    # Enable raspberry pi 7" display
+    if [ ${DISPLAY_TYPE} == "rpi7"]; then
+        echo "ignore_lcd=0" >>${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+        echo "dtoverlay=rpi-backlight" >>${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+        echo "dtoverlay=rpi-ft5406" >>${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+    fi
+
     # Enable audio 
     sed -i '/#dtparam=audio=off/ c\dtparam=audio=on' ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
 
