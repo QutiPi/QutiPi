@@ -2,7 +2,7 @@ LINUX_VERSION = "4.9.76"
 
 SRCREV = "aae807a781807e95c761fe0a5babbc9bd5adaed6"
 
-KERNEL_DEVICETREE ?= " \
+KERNEL_DEVICETREE = " \
     bcm2708-rpi-0-w.dtb \
     bcm2708-rpi-b.dtb \
     bcm2708-rpi-b-plus.dtb \

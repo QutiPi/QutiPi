@@ -18,7 +18,7 @@ addtask do_compile_dt_blob before do_build
 
 do_deploy() {
     # Ensure dir exists
-    install -d ${THISDIR}/bcm2835-bootfiles
+    install -d ${DEPLOYDIR}/bcm2835-bootfiles
     
     # Copy the dt-blob.bin file
     cp ${THISDIR}/files/dt-blob.bin ${DEPLOYDIR}/bcm2835-bootfiles/

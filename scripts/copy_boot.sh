@@ -124,37 +124,37 @@ if [ $? -ne 0 ]; then
 	exit 1
 fi
 
-echo "Copying overlay dtbos"
-for f in ${SRCDIR}/${KERNEL_IMAGETYPE}-*.dtbo; do
-	if [ -L $f ]; then
-		sudo cp $f /media/card/overlays
-	fi
-done
+# echo "Copying overlay dtbos"
+# for f in ${SRCDIR}/${KERNEL_IMAGETYPE}-*.dtbo; do
+# 	if [ -L $f ]; then
+# 		sudo cp $f /media/card/overlays
+# 	fi
+# done
 
-if [ $? -ne 0 ]; then
-	echo "Error copying overlays"
-	sudo umount ${DEV}
-	exit 1
-fi
+# if [ $? -ne 0 ]; then
+# 	echo "Error copying overlays"
+# 	sudo umount ${DEV}
+# 	exit 1
+# fi
 
-echo "Stripping ${KERNEL_IMAGETYPE}- from overlay dtbs"
-case "${KERNEL_IMAGETYPE}" in
-	Image)
-		sudo rename 's/Image-([\w\-]+)-overlay.dtb/$1.dtbo/g' /media/card/overlays/*.dtb
-		;;
-	zImage)
-		sudo rename 's/zImage-([\w\-]+)-overlay.dtb/$1.dtbo/g' /media/card/overlays/*.dtb
-		;;
-	uImage)
-		sudo rename 's/uImage-([\w\-]+)-overlay.dtb/$1.dtbo/g' /media/card/overlays/*.dtb
-		;;
-esac
+# echo "Stripping ${KERNEL_IMAGETYPE}- from overlay dtbs"
+# case "${KERNEL_IMAGETYPE}" in
+# 	Image)
+# 		sudo rename 's/Image-([\w\-]+)-overlay.dtb/$1.dtbo/g' /media/card/overlays/*.dtb
+# 		;;
+# 	zImage)
+# 		sudo rename 's/zImage-([\w\-]+)-overlay.dtb/$1.dtbo/g' /media/card/overlays/*.dtb
+# 		;;
+# 	uImage)
+# 		sudo rename 's/uImage-([\w\-]+)-overlay.dtb/$1.dtbo/g' /media/card/overlays/*.dtb
+# 		;;
+# esac
 
-if [ $? -ne 0 ]; then
-	echo "Error stripping overlays"
-	sudo umount ${DEV}
-	exit 1
-fi
+# if [ $? -ne 0 ]; then
+# 	echo "Error stripping overlays"
+# 	sudo umount ${DEV}
+# 	exit 1
+# fi
 
 echo "Copying dtbs"
 for f in ${DTBS}; do
