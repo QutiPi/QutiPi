@@ -5,6 +5,9 @@ export PATH=${PATH}:/usr/bin/qt5
 # the other option is linuxfb if just using qt widgets
 export QT_QPA_PLATFORM=eglfs
 
+# Hide cursor or not
+export QT_QPA_EGLFS_HIDECURSOR=${HIDE_CURSOR}
+
 # Setup RPI 7" LCD
 export QT_QPA_EGLFS_PHYSICAL_WIDTH=${EGLFS_PWIDTH}
 export QT_QPA_EGLFS_PHYSICAL_HEIGHT=${EGLFS_PHEIGHT}
