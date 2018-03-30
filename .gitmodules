@@ -20,7 +20,7 @@
 	branch = rocko
 [submodule "vendor/meta-mingw"]
 	path = vendor/meta-mingw
-	url = https://github.com/QutiPi/meta-mingw.git
+	url = https://github.com/QutiPi/meta-mingw
 	branch = rocko
 [submodule "vendor/meta-darwin"]
 	path = vendor/meta-darwin
