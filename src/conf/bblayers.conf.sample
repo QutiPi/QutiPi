@@ -23,8 +23,8 @@ BBLAYERS ?= " \
   ${BSPDIR}/vendor/meta-openembedded/meta-perl \
   ${BSPDIR}/vendor/meta-raspberrypi \
   ${BSPDIR}/vendor/meta-security \
-  ${BSPDIR}/vendor/meta-qt5 \
   ${BSPDIR}/vendor/meta-mingw \
+  ${BSPDIR}/vendor/meta-qt5 \
   ${BSPDIR}/src \
   ${BSPDIR}/packages/${PACKAGE} \
   ${BSPDIR}/customise/${CUSTOMISE} \
