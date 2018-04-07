@@ -4,6 +4,10 @@ LICENSE = "MIT"
 
 require console-image.bb
 
+inherit populate_sdk_qt5
+
+IMAGE_FEATURES += "dev-pkgs"
+
 QT_DEV_TOOLS = " \
     qtbase-dev \
     qtbase-mkspecs \
