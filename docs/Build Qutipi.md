@@ -52,7 +52,7 @@ There may be variable in here which you want to edit for example:
 We are now going to build Qutipi using bitbake by running the following
 
 ```bash
-bitbake qt5-image
+bitbake qt5-image -c populate_sdk
 ```
 
 This will take several hours to complete if it is the first time building.
