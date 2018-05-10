@@ -69,6 +69,7 @@ EXTRA_TOOLS_INSTALL = " \
     util-linux \
     wget \
     zip \
+    dtc \
 "
 
 IMAGE_INSTALL += " \

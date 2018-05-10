@@ -13,12 +13,16 @@ CORE_OS = " \
     openssh openssh-keygen openssh-sftp-server \
     term-prompt \
     tzdata \
+    kernel-modules \
+    packagegroup-core-boot \
 "
+
+# linux-firmware-bcm43430
 
 WIFI_SUPPORT = " \
     crda \
     iw \
-    linux-firmware-bcm43430 \
+    linux-firmware-raspbian \
     wireless-tools \
     wpa-supplicant \
 "
@@ -57,6 +61,7 @@ DEV_EXTRAS = " \
     macchanger \
     watchdog \
     application-loader \
+    dtc \
 "
 
 LMSENSORS_ALL = " \
@@ -103,6 +108,9 @@ EXTRA_TOOLS_INSTALL = " \
 
 RPI_STUFF = " \
     userland \
+    wiringpi \
+    rpio \
+    rpi-gpio \
 "
 
 IMAGE_INSTALL += " \

@@ -6,7 +6,11 @@ require console-image.bb
 
 inherit populate_sdk_qt5
 
-IMAGE_FEATURES += "dev-pkgs"
+inherit populate_qt5_sdk_mkspecs
+
+inherit populate_sdk_mingw_fixsymlink
+
+# IMAGE_FEATURES += "dev-pkgs"
 
 RDEPENDS_${PN}_append_linux = "\
     nativesdk-python3-modules \
@@ -18,9 +22,10 @@ RDEPENDS_${PN}_append = "\
     nativesdk-make \
     nativesdk-libgcc \
     nativesdk-libstdc++ \
+    nativesdk-cmake \
     "
 
-TOOLCHAIN_HOST_TASK_append = " nativesdk-make nativesdk-libgcc nativesdk-libstdc++"
+TOOLCHAIN_HOST_TASK_append = " nativesdk-make nativesdk-libgcc nativesdk-libstdc++ nativesdk-cmake"
 
 TOOLCHAIN_HOST_TASK_append_linux = "nativesdk-python3-modules nativesdk-python3-misc nativesdk-perl-modules"
 
@@ -56,6 +61,7 @@ TSLIB = " \
 IMAGE_INSTALL += " \
     ${FONTS} \
     ${QT_TOOLS} \
+    ${QT_DEV_TOOLS} \
     qcolorcheck \
     ${TSLIB} \
     tspress \

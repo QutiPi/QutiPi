@@ -48,6 +48,6 @@ HostLibraries = C:/qutipi/cm3/sysroots/x86_64-pokysdk-linux/usr/lib
 Sysroot = C:/qutipi/cm3/sysroots/cortexa7hf-neon-vfpv4-poky-linux-gnueabi
 ```
 
-
-
 When running compilations via the terminal be sure to run environment-setup-cortexa7hf-neon-vfpv4-poky-linux-gnueabi.bat file first to setup environment variables.
+
+Guide to follow on setting up Qt Creator.

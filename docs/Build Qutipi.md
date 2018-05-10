@@ -6,7 +6,7 @@ Follow the below to compile QutiPi from scratch. Currently this is a slightly an
 
 Pull the source from git
 
-```bash
+```shell
 cd ~/Documents
 git clone https://github.com/QutiPi/meta-qutipi.git
 ```
@@ -15,7 +15,7 @@ git clone https://github.com/QutiPi/meta-qutipi.git
 
 Navigate to meta qutipi build director:
 
-```bash
+```shell
 cd ~/Documents/meta-qutipi/build
 ``` 
 
@@ -23,14 +23,14 @@ cd ~/Documents/meta-qutipi/build
 
 Create the build config dir and setup the template configuration directory
 
-```bash
+```shell
 mkdir -p ~/Documents/meta-qutipi/build/conf
 cp ~/Documents/meta-qutipi/src/conf/templateconf.cfg ~/Documents/meta-qutipi/build/conf/templateconf.cfg
 ```
 
 Next we need to run a Yocto script to setup some enviroment settings
 
-```bash
+```shell
 source ../vendor/poky-rocko/oe-init-build-env ~/Documents/meta-qutipi/build
 ```
 
@@ -51,7 +51,7 @@ There may be variable in here which you want to edit for example:
 
 We are now going to build Qutipi using bitbake by running the following
 
-```bash
+```shell
 bitbake qt5-image -c populate_sdk
 ```
 

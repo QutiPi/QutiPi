@@ -56,6 +56,7 @@ QML_APPS = " \
 "
 
 IMAGE_INSTALL += " \
+    ${QT5_DEV_PKGS} \
     ${QT5_PKGS} \
     ${QML_APPS} \
 "
