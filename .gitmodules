@@ -29,3 +29,6 @@
 [submodule "tools/psplash"]
 	path = tools/psplash
 	url = https://git.yoctoproject.org/git/psplash
+[submodule "vendor/meta-mender"]
+	path = vendor/meta-mender
+	url = https://github.com/mendersoftware/meta-mender
