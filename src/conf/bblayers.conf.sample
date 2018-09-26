@@ -22,6 +22,8 @@ BBLAYERS ?= " \
   ${BSPDIR}/vendor/meta-openembedded/meta-multimedia \
   ${BSPDIR}/vendor/meta-openembedded/meta-perl \
   ${BSPDIR}/vendor/meta-raspberrypi \
+  ${BSPDIR}/vendor/meta-mender/meta-mender-core \
+  ${BSPDIR}/vendor/meta-mender/meta-mender-raspberrypi \
   ${BSPDIR}/vendor/meta-security \
   ${BSPDIR}/vendor/meta-mingw \
   ${BSPDIR}/vendor/meta-qt5 \
