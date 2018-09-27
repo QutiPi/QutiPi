@@ -21,6 +21,23 @@ EXTRA_USERS_PARAMS = "usermod -P qutipi root; "
 
 
 
+
+# Mendor settings
+MENDER_ARTIFACT_NAME = "release-1"
+INHERIT += "mender-full"
+RPI_USE_U_BOOT = "1"
+MENDER_BOOT_PART_SIZE_MB = "40"
+IMAGE_INSTALL_append = " kernel-image kernel-devicetree"
+IMAGE_FSTYPES_remove += " rpi-sdimg"
+MENDER_STORAGE_TOTAL_SIZE_MB = "2048"
+
+# Build for Hosted Mender
+# MENDER_SERVER_URL = "https://hosted.mender.io"
+# MENDER_TENANT_TOKEN = "<YOUR-HOSTED-MENDER-TENANT-TOKEN>"
+
+
+
+
 # Hide Cursor? 1 for yes, 0 for no
 HIDE_CURSOR = "1"
 
@@ -44,21 +61,6 @@ DISPLAY_TYPE = "hdmi"
 
 
 
-# Mendor settings
-MENDER_ARTIFACT_NAME = "release-1"
-INHERIT += "mender-full"
-RPI_USE_U_BOOT = "1"
-MENDER_PARTITION_ALIGNMENT_KB = "4096"
-MENDER_BOOT_PART_SIZE_MB = "40"
-IMAGE_INSTALL_append = " kernel-image kernel-devicetree"
-IMAGE_FSTYPES_remove += " rpi-sdimg"
-
-# Build for Hosted Mender
-#
-# MENDER_SERVER_URL = "https://hosted.mender.io"
-# MENDER_TENANT_TOKEN = "<YOUR-HOSTED-MENDER-TENANT-TOKEN>"
-
-
 
 # Where to store the temp build files?
 #TMPDIR = "${TOPDIR}/tmp"
@@ -78,15 +80,21 @@ DISTRO ?= "qutipi"
 
 
 
+
 # SDK target architecture linux 
 SDKMACHINE = "x86_64"
 
 # SDK target architecture windows 
-#SDKMACHINE = "x86_64-mingw32"
+#SDKMACHINE = "i686-mingw32"
 #OE_QMAKE_PLATFORM_NATIVE_mingw32 = "win32-g++-oe"
 #OE_QMAKE_PLATFORM_mingw32 = "win32-g++-oe"
 #QT_MODULE_BRANCH_PARAM = "nobranch=1"
 #PACKAGE_EXCLUDE_COMPLEMENTARY ?= "qtquickcompiler"
+
+
+#SDKMACHINE = "i386-darwin"
+
+
 
 
 
