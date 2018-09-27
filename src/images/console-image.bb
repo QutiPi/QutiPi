@@ -18,6 +18,7 @@ CORE_OS = " \
 "
 
 # linux-firmware-bcm43430
+# linux-firmware-raspbian
 
 WIFI_SUPPORT = " \
     crda \

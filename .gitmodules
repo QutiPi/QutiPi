@@ -1,34 +1,35 @@
-[submodule "vendor/poky-rocko"]
-	path = vendor/poky-rocko
+[submodule "vendor/poky"]
+	path = vendor/poky
 	url = git://git.yoctoproject.org/poky.git
-	branch = rocko
+	branch = sumo
 [submodule "vendor/meta-qt5"]
 	path = vendor/meta-qt5
 	url = https://github.com/meta-qt5/meta-qt5
-	branch = rocko
+	branch = sumo
 [submodule "vendor/meta-security"]
 	path = vendor/meta-security
 	url = git://git.yoctoproject.org/meta-security
-	branch = rocko
+	branch = sumo
 [submodule "vendor/meta-raspberrypi"]
 	path = vendor/meta-raspberrypi
 	url = git://git.yoctoproject.org/meta-raspberrypi
-	branch = rocko
+	branch = sumo
 [submodule "vendor/meta-openembedded"]
 	path = vendor/meta-openembedded
 	url = git://git.openembedded.org/meta-openembedded
-	branch = rocko
+	branch = sumo
 [submodule "vendor/meta-mingw"]
 	path = vendor/meta-mingw
-	url = https://github.com/QutiPi/meta-mingw
-	branch = rocko
+	url = git://git.yoctoproject.org/meta-mingw
+	branch = sumo
 [submodule "vendor/meta-darwin"]
 	path = vendor/meta-darwin
 	url = git://git.yoctoproject.org/meta-darwin
-	branch = rocko
+	branch = sumo
 [submodule "tools/psplash"]
 	path = tools/psplash
 	url = https://git.yoctoproject.org/git/psplash
 [submodule "vendor/meta-mender"]
 	path = vendor/meta-mender
 	url = https://github.com/mendersoftware/meta-mender
+	branch = sumo

@@ -1,5 +1,5 @@
 SUMMARY = "A Qt5 development image"
-HOMEPAGE = "http://www.jumpnowtek.com"
+HOMEPAGE = "https://github.com/QutiPi"
 LICENSE = "MIT"
 
 require qt5-basic-image.bb

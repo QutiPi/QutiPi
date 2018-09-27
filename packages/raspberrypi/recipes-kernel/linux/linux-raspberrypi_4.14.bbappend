@@ -1,31 +1,39 @@
-LINUX_VERSION = "4.9.80"
+LINUX_VERSION = "4.14.71"
 
-SRCREV = "027885087faa515133534cf767a1cd66cbd6cd1e"
+SRCREV = "4f30a5365296658d66ef8a9f878a25d229e2d5fa"
 
-KERNEL_DEVICETREE ?= " \
+RPI_KERNEL_DEVICETREE = " \
     bcm2708-rpi-0-w.dtb \
     bcm2708-rpi-b.dtb \
     bcm2708-rpi-b-plus.dtb \
     bcm2708-rpi-cm.dtb \
     bcm2709-rpi-2-b.dtb \
+    bcm2710-rpi-3-b-plus.dtb \
     bcm2710-rpi-3-b.dtb \
     bcm2710-rpi-cm3.dtb \
-    \
+"
+
+RPI_KERNEL_DEVICETREE_OVERLAYS = " \
     overlays/adau1977-adc.dtbo \
     overlays/adau7002-simple.dtbo \
     overlays/ads1015.dtbo \
     overlays/ads1115.dtbo \
     overlays/ads7846.dtbo \
+    overlays/adv7282m.dtbo \
+    overlays/adv728x-m.dtbo \
     overlays/akkordion-iqdacplus.dtbo \
     overlays/allo-boss-dac-pcm512x-audio.dtbo \
     overlays/allo-digione.dtbo \
+    overlays/allo-katana-dac-audio.dtbo \
     overlays/allo-piano-dac-pcm512x-audio.dtbo \
     overlays/allo-piano-dac-plus-pcm512x-audio.dtbo \
     overlays/applepi-dac.dtbo \
     overlays/at86rf233.dtbo \
     overlays/audioinjector-addons.dtbo \
+    overlays/audioinjector-ultra.dtbo \
     overlays/audioinjector-wm8731-audio.dtbo \
     overlays/audremap.dtbo \
+    overlays/balena-fin.dtbo \
     overlays/bmp085_i2c-sensor.dtbo \
     overlays/dht11.dtbo \
     overlays/dionaudio-loco.dtbo \
@@ -41,9 +49,12 @@ KERNEL_DEVICETREE ?= " \
     overlays/goodix.dtbo \
     overlays/googlevoicehat-soundcard.dtbo \
     overlays/gpio-ir.dtbo \
+    overlays/gpio-ir-tx.dtbo \
     overlays/gpio-key.dtbo \
+    overlays/gpio-no-irq.dtbo \
     overlays/gpio-poweroff.dtbo \
     overlays/gpio-shutdown.dtbo \
+    overlays/hd44780-lcd.dtbo \
     overlays/hifiberry-amp.dtbo \
     overlays/hifiberry-dac.dtbo \
     overlays/hifiberry-dacplus.dtbo \
@@ -64,9 +75,11 @@ KERNEL_DEVICETREE ?= " \
     overlays/iqaudio-dac.dtbo \
     overlays/iqaudio-dacplus.dtbo \
     overlays/iqaudio-digi-wm8804-audio.dtbo \
+    overlays/jedec-spi-nor.dtbo \
     overlays/justboom-dac.dtbo \
     overlays/justboom-digi.dtbo \
     overlays/lirc-rpi.dtbo \
+    overlays/ltc294x.dtbo \
     overlays/mbed-dac.dtbo \
     overlays/mcp23017.dtbo \
     overlays/mcp23s17.dtbo \
@@ -80,11 +93,13 @@ KERNEL_DEVICETREE ?= " \
     overlays/mmc.dtbo \
     overlays/mpu6050.dtbo \
     overlays/mz61581.dtbo \
+    overlays/ov5647.dtbo \
     overlays/papirus.dtbo \
     overlays/pi3-act-led.dtbo \
     overlays/pi3-disable-bt.dtbo \
     overlays/pi3-disable-wifi.dtbo \
     overlays/pi3-miniuart-bt.dtbo \
+    overlays/pibell.dtbo \
     overlays/piscreen2r.dtbo \
     overlays/piscreen.dtbo \
     overlays/pisound.dtbo \
@@ -94,20 +109,22 @@ KERNEL_DEVICETREE ?= " \
     overlays/pitft35-resistive.dtbo \
     overlays/pps-gpio.dtbo \
     overlays/pwm-2chan.dtbo \
+    overlays/pwm-ir-tx.dtbo \
     overlays/pwm.dtbo \
     overlays/qca7000.dtbo \
-    overlays/raspidac3.dtbo \
     overlays/rotary-encoder.dtbo \
     overlays/rpi-backlight.dtbo \
     overlays/rpi-cirrus-wm5102.dtbo \
     overlays/rpi-dac.dtbo \
     overlays/rpi-display.dtbo \
     overlays/rpi-ft5406.dtbo \
+    overlays/rpi-poe.dtbo \
     overlays/rpi-proto.dtbo \
     overlays/rpi-sense.dtbo \
     overlays/rpi-tv.dtbo \
     overlays/rra-digidac1-wm8741-audio.dtbo \
     overlays/sc16is750-i2c.dtbo \
+    overlays/sc16is752-i2c.dtbo \
     overlays/sc16is752-spi1.dtbo \
     overlays/sdhost.dtbo \
     overlays/sdio-1bit.dtbo \
@@ -126,13 +143,25 @@ KERNEL_DEVICETREE ?= " \
     overlays/spi2-3cs.dtbo \
     overlays/spi-gpio35-39.dtbo \
     overlays/spi-rtc.dtbo \
+    overlays/superaudioboard.dtbo \
+    overlays/sx150x.dtbo \
+    overlays/tc358743-audio.dtbo \
+    overlays/tc358743.dtbo \
     overlays/tinylcd35.dtbo \
     overlays/uart0.dtbo \
     overlays/uart1.dtbo \
+    overlays/upstream-aux-interrupt.dtbo \
+    overlays/upstream.dtbo \
     overlays/vc4-fkms-v3d.dtbo \
+    overlays/vc4-kms-kippah-7inch.dtbo \
     overlays/vc4-kms-v3d.dtbo \
     overlays/vga666.dtbo \
     overlays/w1-gpio.dtbo \
     overlays/w1-gpio-pullup.dtbo \
     overlays/wittypi.dtbo \
+"
+
+KERNEL_DEVICETREE = " \
+    ${RPI_KERNEL_DEVICETREE} \
+    ${RPI_KERNEL_DEVICETREE_OVERLAYS} \
 "
