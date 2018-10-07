@@ -6,6 +6,9 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 SRC_URI += "file://50-${ETHERNET_TYPE}.network \
            "
 
+FILES_${PN}_append = " /data/networkd/50-${ETHERNET_TYPE}.network"
+
+
 PR = "r0"
 S = "${WORKDIR}"
 
@@ -35,11 +38,16 @@ python do_create_configuration(){
 
 
 # Run function before build to generate the interfaces file
+#   - symbolic link network file to data persistence location
 addtask do_create_configuration before do_build
 
 do_install() {
+    install -d ${D}/data/networkd
+    install -m 0755 50-${ETHERNET_TYPE}.network ${D}/data/networkd
+
     install -d ${D}${sysconfdir}/systemd/network
-    install -m 0755 50-${ETHERNET_TYPE}.network ${D}${sysconfdir}/systemd/network 
+    ln -sf /data/networkd/50-${ETHERNET_TYPE}.network ${D}${sysconfdir}/systemd/network 
+    # install -m 0755 50-${ETHERNET_TYPE}.network ${D}${sysconfdir}/systemd/network 
 }
 
 FILES_${PN} = "${sysconfdir}"
