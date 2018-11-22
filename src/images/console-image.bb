@@ -63,6 +63,7 @@ DEV_EXTRAS = " \
     watchdog \
     application-loader \
     dtc \
+    hunspell \
 "
 
 LMSENSORS_ALL = " \

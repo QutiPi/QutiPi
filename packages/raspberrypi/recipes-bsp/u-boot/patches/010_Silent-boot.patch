@@ -1,0 +1,103 @@
+diff --git a/board/raspberrypi/rpi/rpi.c b/board/raspberrypi/rpi/rpi.c
+index 3b7a54f..5841dfc 100644
+--- a/board/raspberrypi/rpi/rpi.c
++++ b/board/raspberrypi/rpi/rpi.c
+@@ -229,6 +229,12 @@ static struct mm_region bcm2837_mem_map[] = {
+ struct mm_region *mem_map = bcm2837_mem_map;
+ #endif
+ 
++int board_early_init_f(void)
++{
++    gd->flags |= (GD_FLG_SILENT | GD_FLG_DISABLE_CONSOLE);
++    return 0;
++}
++
+ int dram_init(void)
+ {
+ 	ALLOC_CACHE_ALIGN_BUFFER(struct msg_get_arm_mem, msg, 1);
+diff --git a/configs/rpi_0_w_defconfig b/configs/rpi_0_w_defconfig
+index 9a6d24b..5058dc5 100644
+--- a/configs/rpi_0_w_defconfig
++++ b/configs/rpi_0_w_defconfig
+@@ -9,6 +9,13 @@ CONFIG_OF_BOARD_SETUP=y
+ CONFIG_SYS_PROMPT="U-Boot> "
+ # CONFIG_CMD_FLASH is not set
+ # CONFIG_CMD_FPGA is not set
++CONFIG_DISABLE_CONSOLE=y
++CONFIG_SILENT_CONSOLE=y
++CONFIG_SILENT_CONSOLE_UPDATE_ON_RELOC=y
++CONFIG_BOOTDELAY=0
++CONFIG_SYS_DEVICE_NULLDEV
++CONFIG_EXTRA_ENV_SETTINGS \
++		"silent=1\0" \
+ CONFIG_CMD_GPIO=y
+ CONFIG_CMD_MMC=y
+ CONFIG_CMD_USB=y
+diff --git a/configs/rpi_2_defconfig b/configs/rpi_2_defconfig
+index c45ffb6..a3842cc 100644
+--- a/configs/rpi_2_defconfig
++++ b/configs/rpi_2_defconfig
+@@ -9,6 +9,12 @@ CONFIG_OF_BOARD_SETUP=y
+ CONFIG_SYS_PROMPT="U-Boot> "
+ # CONFIG_CMD_FLASH is not set
+ # CONFIG_CMD_FPGA is not set
++CONFIG_DISABLE_CONSOLE=y
++CONFIG_SILENT_CONSOLE=y
++CONFIG_SILENT_CONSOLE_UPDATE_ON_RELOC=y
++CONFIG_BOOTDELAY=0
++CONFIG_SYS_DEVICE_NULLDEV
++CONFIG_EXTRA_ENV_SETTINGS "silent=1\0"
+ CONFIG_CMD_GPIO=y
+ CONFIG_CMD_MMC=y
+ CONFIG_CMD_USB=y
+diff --git a/configs/rpi_3_32b_defconfig b/configs/rpi_3_32b_defconfig
+index f7aed35..d0ea2c9 100644
+--- a/configs/rpi_3_32b_defconfig
++++ b/configs/rpi_3_32b_defconfig
+@@ -10,6 +10,12 @@ CONFIG_OF_BOARD_SETUP=y
+ CONFIG_SYS_PROMPT="U-Boot> "
+ # CONFIG_CMD_FLASH is not set
+ # CONFIG_CMD_FPGA is not set
++CONFIG_DISABLE_CONSOLE=y
++CONFIG_SILENT_CONSOLE=y
++CONFIG_SILENT_CONSOLE_UPDATE_ON_RELOC=y
++CONFIG_BOOTDELAY=0
++CONFIG_SYS_DEVICE_NULLDEV
++CONFIG_EXTRA_ENV_SETTINGS "silent=1\0"
+ CONFIG_CMD_GPIO=y
+ CONFIG_CMD_MMC=y
+ CONFIG_CMD_USB=y
+diff --git a/configs/rpi_3_defconfig b/configs/rpi_3_defconfig
+index 9416e3b..26b9080 100644
+--- a/configs/rpi_3_defconfig
++++ b/configs/rpi_3_defconfig
+@@ -10,6 +10,12 @@ CONFIG_OF_BOARD_SETUP=y
+ CONFIG_SYS_PROMPT="U-Boot> "
+ # CONFIG_CMD_FLASH is not set
+ # CONFIG_CMD_FPGA is not set
++CONFIG_DISABLE_CONSOLE=y
++CONFIG_SILENT_CONSOLE=y
++CONFIG_SILENT_CONSOLE_UPDATE_ON_RELOC=y
++CONFIG_BOOTDELAY=0
++CONFIG_SYS_DEVICE_NULLDEV
++CONFIG_EXTRA_ENV_SETTINGS "silent=1\0"
+ CONFIG_CMD_GPIO=y
+ CONFIG_CMD_MMC=y
+ CONFIG_CMD_USB=y
+diff --git a/configs/rpi_defconfig b/configs/rpi_defconfig
+index 3bfa745..722f6ca 100644
+--- a/configs/rpi_defconfig
++++ b/configs/rpi_defconfig
+@@ -9,6 +9,12 @@ CONFIG_OF_BOARD_SETUP=y
+ CONFIG_SYS_PROMPT="U-Boot> "
+ # CONFIG_CMD_FLASH is not set
+ # CONFIG_CMD_FPGA is not set
++CONFIG_DISABLE_CONSOLE=y
++CONFIG_SILENT_CONSOLE=y
++CONFIG_SILENT_CONSOLE_UPDATE_ON_RELOC=y
++CONFIG_BOOTDELAY=0
++CONFIG_SYS_DEVICE_NULLDEV
++CONFIG_EXTRA_ENV_SETTINGS "silent=1\0"
+ CONFIG_CMD_GPIO=y
+ CONFIG_CMD_MMC=y
+ CONFIG_CMD_USB=y

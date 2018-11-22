@@ -27,6 +27,10 @@ do_deploy_append() {
     # Setup ethernet 
     echo "dtoverlay=enc28j60,int_pin=34" >>${DEPLOYDIR}/bcm2835-bootfiles/config.txt
 
+    # Setup shutdown and power off signal 
+    echo "dtoverlay=gpio-shutdown,gpio_pin=5,active_low=1,gpio_pull=off" >>${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+    echo "dtoverlay=gpio-poweroff,gpiopin=35,active_low=1" >>${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+
     # Setup CMA
     sed -i '/#cma_lwm=16/ c\cma_lwm=16' ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
     sed -i '/#cma_hwm=32/ c\cma_hwm=32' ${DEPLOYDIR}/bcm2835-bootfiles/config.txt

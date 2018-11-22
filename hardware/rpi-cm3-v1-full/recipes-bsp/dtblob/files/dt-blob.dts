@@ -27,11 +27,16 @@
 
 				pin@p4 {
 					function = "output";
-					termination = "no_pulling";
+					termination = "pull_up";
 				};
 
 				pin@p5 {
-					function = "output";
+					function = "input";
+					termination = "no_pulling";
+				};
+
+				pin@p6 {
+					function = "input";
 					termination = "no_pulling";
 				};
 

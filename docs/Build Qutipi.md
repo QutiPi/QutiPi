@@ -31,7 +31,7 @@ cp ~/Documents/meta-qutipi/src/conf/templateconf.cfg ~/Documents/meta-qutipi/bui
 Next we need to run a Yocto script to setup some enviroment settings
 
 ```shell
-source ../vendor/poky-rocko/oe-init-build-env ~/Documents/meta-qutipi/build
+source ../vendor/poky/oe-init-build-env ~/Documents/meta-qutipi/build
 ```
 
 ## Edit local.conf
